@@ -56,6 +56,12 @@ var allProjects = [
     },
     {
         number: 10,
+        title: 'Login Form',
+        secondTitle: 'Simple login and register form',
+        href: 'projects/9-Login/index.html'
+    },
+    {
+        number: 11,
         title: 'More coming soon!',
         secondTitle: '',
         href: ''
