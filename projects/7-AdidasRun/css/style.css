@@ -1,0 +1,682 @@
+
+                    /* PRE */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+html{
+    height: 100%;
+    overflow-x: hidden;
+    background: #111;
+}
+
+span{
+    font-size: 30px;
+    font-weight: 100;
+    color: rgba(255,255,255,0.6);
+}
+h2{
+    font-size: 60px;
+    font-weight: 100;
+    color: rgba(255,255,255,0.95);
+}
+h3{
+    font-size: 20px;
+    font-weight: 100;
+    color: rgba(255,255,255,0.4);
+}
+
+/*btn*/
+.btn{
+    width: auto;
+    height: auto;
+    background-color: rgba(0,191,243,0.8);
+    outline: 5px solid rgba(0,191,243,0.3);
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    padding: 15px 6%;
+    font-weight: 100;
+    cursor: pointer; 
+    transition: 500ms ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.btn i{
+    font-size: 40px;
+}
+.btn p,
+.btn span{
+    margin-left: 25px;
+}
+.btn:hover{
+    outline: 5px solid rgba(0,191,243,0.5);
+    background: rgba(0,191,243,0.5);
+    border-radius: 0;
+    transition: 500ms ease;
+}
+/*btn-end*/
+
+                    /* HEADER */
+
+.header{
+    background-image: url(../images/background/header-background.jpg);
+    background-size: cover;
+    height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+    padding: 4%;
+}
+.header h1{
+    font-size: 72px;
+    text-shadow: rgb(3, 3, 3) 0px 0px 6px;
+}
+.header span{
+    text-shadow: rgb(3, 3, 3) 0px 0px 6px;
+}
+.header-title{
+    margin-bottom: 50px;
+}
+.header .btn i{
+    font-size: 20px;
+}
+                    /* HEADER END*/
+                    /* ADIDAS */
+
+.adidas{
+    background: #111;
+    width: 100%;
+    height: 220px;
+    text-align: center;
+}
+.adidas .logo, 
+.adidas span{
+    position: relative;
+    top: -200px;
+    opacity: 0;
+}
+
+                    /* ADIDAS END*/
+                    /* STEPS */
+
+.steps{
+    background-image: url(../images/background/steps-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1450px;
+    position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+.steps-container{
+    text-align: center;
+    position: relative;
+    padding: 1%;
+    max-width: 34%;
+}
+.steps-container:nth-child(1){
+    top: 500px;
+}
+.steps-container:nth-child(2){
+    top: 100px;
+}
+.steps-container:nth-child(3){
+    top: 400px;
+}
+.steps-container img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.steps-text{
+    margin-top: 25px;
+}
+.steps-text .right-text{
+    display: inline;
+}
+.steps-line{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+}
+.circle{
+    font-size: 72px;
+    position: relative;
+    background: #222;
+}
+.circle:after{
+    content: "";
+    background: white;
+    height: 1px;
+    width: 590px;
+    position: absolute;
+    top: 50%;
+}
+.circle:last-child:after{
+    background: #222;
+}
+
+                    /* STEPS END*/
+                    /* CHOSE */
+
+.chose{
+    background: black;
+    position: relative;
+    height: 1630px;
+    background-image: url(../images/background/bg-clouds.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 4%;
+}
+.chose-title{
+    text-align: center;
+    position: absolute;
+    top: -180px;
+    width: 100%;
+}
+.chose-box{
+    top: -80px;
+    position: relative;
+    max-width: 822px;
+    width: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+}
+.chose-box:last-child{
+    width: 100%;
+    max-width: 100%;
+}
+.chose-box .box-title,
+.chose-box .box-desc{
+    z-index: 1;
+    text-align: center;
+}
+.btn-cont{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 5px 0;
+}
+.back{
+    position: absolute;
+}
+.cover{
+        -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+                    /* CHOSE END*/
+                    /* SHOE */
+.shoe{
+    background-image: url(../images/background/shoes_backgorund2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1109px;
+    position: relative;
+    top: -45px;
+}
+
+.text-first-line{
+    padding: 4%;
+}
+.text-second-line{
+    position: relative;
+}
+.text-second-line img{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.second-text .title{
+    margin-bottom: 35px;
+}
+.second-text{
+    z-index: 2;
+    position: relative;
+    right: 400px;
+    padding: 4%;
+    text-align: left;
+    float: right;
+}
+/* shoe media*/
+    @media screen and (max-width: 1185px){
+        .second-text{
+            width: 100%;
+            right: 0;
+        }
+        .second-text .btn{
+            width: 300px;
+        }
+        .text-second-line img{
+            right: 0;
+            top: 150px; 
+            z-index: 0;
+        }
+    }
+/* shoe media end*/
+
+.likusa{
+    background-image: url(../images/background/likusa.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 32px;
+    bottom: -380px;
+    opacity: 1;
+}
+
+                    /* SHOE END*/
+                    /* SIGNUP */
+
+.signup-title{
+    position: relative;
+    top: -70px;
+    background: #111;
+    text-align: center;
+    padding: 40px 7px;
+}
+.signup{
+    background: #111;
+    height: auto;
+    position: relative;
+    top: -70px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+.signup form{
+    max-width: 800px;
+    width: 100%;
+    padding: 3%;
+}
+.signup form h4{
+    font-size: 40px;
+    font-weight: 400;
+}
+form .first input,
+form .second input,
+form .third .left input,
+form .third .right select,
+form .forth input,
+form .fifth select,
+.news input{
+    background-color: rgba(0,191,243,1);
+    border: none;
+    height: 60px;
+    width: 100%;
+    max-width: 800px;
+    font-size: 40px;
+    font-weight: 100;
+    color: rgba(255,255,255,0.95);
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+form .third .left input{
+    width: 30%;
+    display: block;
+}
+form .third .right select{
+    display: block;
+    width: 100%;
+}
+form .third .left{
+    float: left;
+    width: 50%;
+}
+form .third .right{
+    float: right;
+    width: 50%;
+}
+form .first-check input,
+form .second-check input{
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+form .forth{
+    clear: both;
+}
+form .btn{
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+form .btn-center{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.2);
+    font-size: 30px;
+}
+::-moz-placeholder {
+    color: rgba(0,0,0,0.2);
+    font-size: 30px;
+}
+:-ms-input-placeholder {
+    color: rgba(0,0,0,0.2);
+    font-size: 30px;
+}
+:-moz-placeholder {
+    color: rgba(0,0,0,0.2);
+    font-size: 30px;
+}
+.signup:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/assets/plavelajne2.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -800px;
+    left: 0;
+    z-index: 0;
+}
+                    /* SHOE END*/
+                    /* NEWSLETTER */
+
+.news{
+    position: relative;
+    clear: both;
+    background: #111;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+.news input{
+    margin: 50px 0;
+}
+
+                    /* NEWSLETTER END*/
+                    /* SOCIAL */
+
+.social{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.or-title{
+    text-align: center;
+    margin: 100px 0;
+}
+
+.social-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.social-bar{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.social .btn i{
+    font-size: 40px;
+}
+.plave-lajne2{
+    width: 100%;
+    margin-top: 150px;
+    background-image: url(../images/background/wave_bg.png);
+}
+
+                    /* SOCIAL END*/
+                    /* MOTIVATE */
+
+.wave_bg{
+    height: 0;
+}
+.wave_bg img{
+    width: 2920px;
+    left: -60px;
+    position: relative;
+}
+.motivate{
+    background-image: url(../images/background/motivate_bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 1980px;
+    z-index: -1;
+    padding: 4%;
+}
+.motivate-title{
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+.motivate-left span,
+.motivate-right span{
+    float: right;
+}
+.motivate-left{
+    position: relative;
+    top: 350px;
+    width: 50%;
+    float: left;
+}
+.motivate-right{
+    position: relative;
+    top: 670px;
+    width: 50%;
+    float: right;
+}
+/*motivate media*/
+    @media screen and (max-width: 1060px) {
+        .motivate-right,
+        .motivate-left{
+            width: 100%;
+            top: 320px;
+        }
+}
+
+
+                    /* MOTIVATE END*/
+                    /* FOOTER */
+.footer h2,
+.footer strong,
+.footer span,
+.footer i,
+.footer li{
+    color: black;
+}
+.footer{
+    background: white;
+    
+}
+.footer .left{
+    float: left;
+    margin: 3%;
+    border-right: 1px solid black;
+    padding-right: 20px;
+}
+.footer .left .footer-social{
+    font-size: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+.footer .left .footer-social i:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.footer .right{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+.footer .right ul{
+    list-style-type: none;
+    font-size: 25px;
+    font-weight: 100;
+    margin: 0 5px;
+}
+.footer .right li{
+    cursor: pointer;
+    transition: 600ms ease-in-out;
+}
+.footer .right li:hover{
+    border-bottom: 1px solid black;
+    transition: 600ms ease-in-out;
+}
+.footer-last{
+    text-align: center;
+    width: 100%;
+    clear: both;
+}
+.footer-last h3{
+    color: white;
+    padding: 15px;
+}
+
+                    /* FOOTER END*/
+
+/* ---------------------------------------------------- */
+
+                    /* MEDIA */
+
+    /*iphone6*/
+@media screen and (max-width: 765px) {
+    .adidas{
+        height: 170px;
+    }
+    .adidas .logo,
+    .adidas span{
+        height: 200px;
+        top: -90px;
+    }
+    .steps{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 250px;
+    }
+    .steps-container{
+        position: static;
+        margin-bottom: 75px;
+        margin-top: 50px;
+        max-width: 100%;
+    }
+    .steps-container .left-text,
+    .steps-line{
+        display: none;
+    }
+    .steps-container .right-text{
+        width: 100%;
+    }
+    .chose{
+        flex-direction: column;
+    }
+    .chose-box{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .chose-box:last-child{
+        display: none;
+    }
+    .chose-title{
+        top: -230px;
+    }
+    .shoe{
+        height: auto;
+    }
+    .likusa{
+        display: none;
+    }
+    .second-text .btn{
+        width: 100%;
+    }
+    .text-second-line img{
+        top: -10px;
+        position: relative;
+        width: 100%;
+    }
+    .social-bar .btn{
+        width: 60%;
+        margin-bottom: 15px;
+    }
+    .social-bar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .right{
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer .left{
+        border-right: 0;
+        border-bottom: 1px solid black;
+        padding-bottom: 15px;
+    }
+    .footer{
+        overflow: auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer ul{
+        padding-bottom: 25px;
+    }
+}
+
+                    /* MEDIA END */

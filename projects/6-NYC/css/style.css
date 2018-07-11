@@ -1,0 +1,444 @@
+                    /* PRE */
+
+
+::-webkit-scrollbar { 
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed";
+}
+html{
+    background: #111;
+    height: 100%;
+    
+}
+
+/* jquery tranitions */
+.scale{                         /*main scale top right*/
+        -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+    transform: scale(0.4);
+    transition: 600ms ease;
+    transform-origin: top right;
+    cursor: pointer;
+}
+.scale:hover{
+        -webkit-transform: scale(0.41);
+        -ms-transform: scale(0.41);
+    transform: scale(0.41);
+}
+
+
+.main-zoom-in{                  /*novi div za back zoom in*/
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bega{
+    opacity: 0;
+    transition: 2s ease;
+}
+/* jquery tranitions end*/
+
+/* tasker for working buttons */
+.crysler-building .circle,
+.wtc-building .circle,
+.more-building .circle,
+.main .title .btn{
+        -webkit-animation: task-avaiable 5s ease forwards;
+    animation: task-avaiable 5s ease forwards;
+}
+.main .title h1,
+.main .title h2{
+        -webkit-animation: task2 2s ease forwards;
+    animation: task2 2s ease forwards;
+    animation-delay: 1s;
+}
+.task{
+    background: black;
+    width: 100%;
+    height: 100%;
+        -webkit-animation: task 2s ease forwards;
+    animation: task 2s ease forwards;
+    animation-delay: 1s;
+    opacity: 1;
+    text-align: center;
+}
+.task:after{
+    content: "Working buttons!";
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+    text-decoration: underline;
+}
+/* crni bg */
+    @-webkit-keyframes task {
+        from {opacity: 1}
+        to {opacity: 0}
+    }
+@keyframes task{
+    from {opacity: 1}
+    to {opacity: 0}
+}
+/* crni main title */
+    @-webkit-keyframes task2 {
+        from {opacity: 0}
+        to {opacity: 1}
+    }
+@keyframes task2{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+/* dugmici koji rade */
+    @-webkit-keyframes task-avaiable{
+        from {background: rgba(255,255,255,0.4);}
+    }
+@keyframes task-avaiable{
+    from {background: rgba(255,255,255,0.4);}
+}
+/* tasker for working buttons end*/
+
+
+                    /* PRE END*/
+
+/* ---------------------------------------------------- */
+
+                    /* MAIN */
+
+.main{
+    background-image: url(../images/background/1920x1200-data-out-171-47062253-nyc-wallpaper.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    transition: 600ms ease;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+}
+.main .title{
+    position: absolute;
+    top: 10%;
+    bottom: 20%;
+    right: 300px;
+    transition: 2s ease;
+}
+.main .title h1{
+    font-size: 120px;
+    color: white;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: uppercase;
+    opacity: 0;
+}
+.main .title h2{
+    font-size: 40px;
+    color: white;
+    font-weight: 300;
+    line-height: 0.8;
+    opacity: 0;
+}
+.main .title .btn{
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    margin-top: 20px;
+    line-height: 0.8;
+    text-align: center;
+    padding: 5%;
+    cursor: pointer;
+    background: rgba(0,0,0,0.4);
+    transition: 600ms ease;
+}
+.main .title .btn:hover,
+.main .title-mobile .btn:hover{
+    background: rgba(0,0,0,0.7);
+    transition: 600ms ease;
+}
+
+.title-mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    display: none;
+}
+.main .title-mobile h1{
+    float: left;
+    padding: 15px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.8);
+}
+.main .title-mobile strong{
+    color: rgba(255,255,255,0.9);
+}
+.main .title-mobile .btn{
+    float: right;
+    font-size: 20px;
+    line-height: 0.8;
+    text-align: center;
+    padding: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    background: rgba(0,0,0,0.4);
+    transition: 600ms ease;
+}
+
+                    /* MAIN END*/
+                    /* BACKGROUNDS */
+
+.bg2,
+.bg3{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 600ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.bg2{
+    background-image: url(../images/background/bg2.png);
+}
+.bg3{
+    background-image: url(../images/background/bg3.png);
+}
+.bg2.active,
+.bg3.active{
+        -webkit-filter: brightness(30%);
+    filter: brightness(30%);
+    transition: 600ms;
+    opacity: 1;
+    background-position: 0 -10px;
+}
+
+                    /* BACKGROUNDS END*/
+                    /* BUILDINGS */
+
+.crysler-building .circle,
+.wtc-building .circle,
+.more-building .circle{
+    background: rgba(0,0,0,0.4);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    left: 20px;
+    transition: 600ms ease;
+    cursor: pointer;
+    z-index: 2;
+    display: block;
+}
+
+.more-building .circle:after{
+    content: "+";
+    position: absolute;
+    top: 6px;
+    font-size: 25px;
+    color: white;
+    left: 18px;
+    opacity: 0.5;
+}
+.more-building .circle{
+    top: 400px;
+}
+.crysler-building .circle{
+    top: 300px;
+}
+.wtc-building .circle{
+    top: 200px;
+}
+.crysler-building .circle:hover,
+.wtc-building .circle:hover,
+.more-building .circle:hover{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 600ms ease;
+}
+.crysler-building .crysler-title,
+.wtc-building .wtc-title,
+.more-building .more-title{
+    color: white;
+    font-size: 30px;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    padding: 2%;
+    padding-left: 100px;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 600ms ease;
+    display: none;
+    overflow: scroll;
+}
+.crysler-building .crysler-title.active,
+.wtc-building .wtc-title.active,
+.more-building .more-title.active{
+    transition: 600ms ease;
+    display: block;
+}
+
+.crysler-building .crysler-title h1,
+.wtc-building .wtc-title h1,
+.more-building .more-title h1{
+    font-size: 40px;
+}
+.crysler-building .crysler-title span,
+.wtc-building .wtc-title span{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+                    /* BUILDINGS END*/
+                    /* MORE INFO */
+
+.more-info{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 600ms ease;
+}
+.more-info:before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: 600ms ease;
+    background-image: url(../images/background/road_new_york_city-26134.jpg);
+    background-size: cover;
+    
+}
+.more-info.blur:before{
+        -webkit-filter: blur(12px) brightness(70%);
+    filter: blur(12px) brightness(70%);
+    transition: 2s ease;
+}
+.more-info-title{
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.more-info-title-mobile{
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
+    line-height: 0.8;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: none;
+}
+.more-info-title.border:after,
+.more-info-title.border:before{
+    width: 100px;
+    height: 100px;
+    transition: 2s ease;
+}
+.more-info-title:after,
+.more-info-title:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid white;
+    transition: 2s ease;
+}
+.more-info-title:before{
+    bottom: -10px;
+    left: -10px;
+    border-bottom: 5px solid white;
+}
+.more-info-title:after{
+    top: -10px;
+    left: -10px;
+    border-top: 5px solid white;
+}
+.more-info-text{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+}
+.more-info-text-mobile{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+}
+.more-info-text h2{
+    margin-top: 10px;
+}
+                    /* MORE INFO END*/
+
+
+/* ---------------------------------------------------- */
+
+                    /* MEDIA */
+
+@media screen and (max-width: 1000px) {     /* no mobile avaiable */
+    .more-info-text{
+        display: none;
+    }
+    .more-info-text-mobile{
+        display: block;
+    }
+    .more-info-title-mobile{
+        top: 60%;
+    }
+}
+@media screen and (max-width: 1450px) {     /* smanjen title na NYC*/
+    .more-info-title{
+        display: none;
+    }
+    .more-info-title-mobile{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1350px) {     /* title u mainu pomeren zbog grade*/
+    .main .title{
+        right: 100px;
+    }
+}
+@media screen and (max-width: 960px) {      /* main, sklonjene zgrade i title centriran*/
+    .main .title{
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .main .title .btn{
+        margin: 20px 20%; 
+    }
+    .crysler-building .circle,
+    .wtc-building .circle,
+    .more-building .circle{
+        display: none;
+    }
+}
+
+                    /* MEDIA END */
