@@ -1,0 +1,133 @@
+/*JQUERY CLASSES*/
+
+/* WELCOME */
+.hide{
+    opacity: 0.3;
+    transition: 2s ease;
+}
+
+.scaleDown{
+        -webkit-animation: scaleDown 5s forwards;
+    animation: scaleDown 5s forwards;
+}
+.scaleUp{
+        -webkit-animation: scaleUp 3s forwards;
+    animation: scaleUp 3s forwards;
+}
+.scaleUpReversed{
+        -webkit-animation: scaleUpReversed 2s;
+    animation: scaleUpReversed 2s;
+        -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+@-webkit-keyframes scaleDown{
+    0%{
+        -webkit-transform: scale(1); 
+        transform: scale(1);
+        opacity: 0.9
+    }
+    50%{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0.4
+    }
+    100%{
+        -webkit-transform: scale(5);
+        transform: scale(5);
+        opacity: 0
+    }
+}
+@keyframes scaleDown{
+    0%{transform: scale(1); opacity: 0.9}
+    50%{transform: scale(2); opacity: 0.4}
+    100%{transform: scale(5); opacity: 0}
+}
+
+@-webkit-keyframes scaleUp{
+    0%{
+        -webkit-transform: scale(1); 
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50%{
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 0.1;
+    }
+    100%{
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+@keyframes scaleUp{
+    0%{transform: scale(1); opacity: 0.9}
+    50%{transform: scale(0.9); opacity: 0.1}
+    100%{transform: scale(0.8); opacity: 0}
+}
+
+@-webkit-keyframes scaleUpReversed{
+    0%{
+        -webkit-transform: scale(1); 
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    100%{
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+}
+@keyframes scaleUpReversed{
+    0%{transform: scale(1); opacity: 0.9}
+    100%{transform: scale(0.8); opacity: 0}
+}
+
+.choose-no{
+    padding: 1%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    bottom: -1100px;
+    font-family: 'BoomBox';
+    display: none;
+    transition: 500ms ease;
+}
+.choose-no-yes{
+    padding: 1%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    bottom: -1100px;
+    font-family: 'BoomBox';
+    transition: 500ms ease;
+    display: none;
+}
+.scared{
+    display: block;
+}
+.scared:before{
+    content: "";
+    position: absolute;
+    background: #111111;
+    width: 100%;
+    height: 100px;
+    right: 0;
+        -webkit-animation: width-anim 4s forwards;
+    animation: width-anim 4s forwards;
+}
+@-webkit-keyframes width-anim{
+    from{width: 100%}
+    to{width: 0%}
+}
+@keyframes width-anim{
+    from{width: 100%}
+    to{width: 0%}
+}
+.retry{
+    display: none;
+}
+
+/*WELCOME END*/

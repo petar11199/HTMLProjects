@@ -1,0 +1,786 @@
+/*
+	Theme Name: Awesome Theme
+	Theme URL: http://alecaddd.com/dashboardtheme
+	Author: Petar
+	Description: This is my dashboard theme              
+
+
+		/* PRE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Roboto Condensed";
+}
+
+html{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background: #F4F4F4;
+}
+
+.container{
+    margin: 0.5%;
+}
+
+/*main*/
+.main{
+    float: right;
+    width: 83%;
+    background: #F4F4F4;
+    transition: 600ms ease;
+}
+.main-width{
+    width: 95%;
+    transition: 600ms ease;
+}
+/*main end*/
+
+/*sector titles*/
+.chart-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.chart-title h1, 
+.chart-title i{
+    color: black;
+    font-weight: 100;
+    font-size: 20px;
+    opacity: 0.7;
+    flex-grow: 1;
+}
+.chart-title i{
+    flex-grow: 0.01;
+    opacity: 0.5;
+    margin-left: 3px;
+}
+.chart-title i:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+/*sector titles end*/
+
+/*nav bar burger*/
+.bar-burger-nav{
+    display: none;
+    transition: 600ms ease;
+}
+.bar-burger-nav:hover{
+    opacity: 0.8;
+}
+/*nav bar burger end*/
+
+                    /* PRE END*/
+                    /* BAR */
+
+.bar{
+    float: left;
+    width: 17%;
+    height: 100%;
+    background: #494E6B;
+    position: fixed;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 600ms ease;
+}
+
+.bar-item{
+    width: 100%;
+    margin: 5px 0;
+    padding: 30px 10%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.bar-item:nth-child(5){
+    text-align: center;
+    display: block;
+}
+.bar-item:hover{
+    background: #494E7B;
+    cursor: pointer;
+}
+.bar-item:hover i{
+    opacity: 1;
+}
+
+.bar-item-name h1{
+    font-weight: 100;
+    opacity: 0.9;
+    font-size: 25px;
+}
+.bar-item-icon i{
+    font-size: 25px;
+    opacity: 0.7;
+}
+
+.bar-burger{
+    font-size: 35px;
+    position: fixed;
+    left: 2%;
+    top: 5%;
+    z-index: 3;
+}
+.bar-burger:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.bar.active{
+    width: 5%;
+    transition: 600ms ease;
+}
+
+                    /* BAR END*/
+                    /* NAV */
+
+.nav{
+    padding-top: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 3%;
+}
+
+.nav-title h1{
+    color: #52123A;
+    font-size: 50px;
+    font-weight: 400;
+    display: inline;
+    opacity: 0.9;
+}
+.nav-title h2{
+    margin-left: 10px;
+    color: #95989A;
+    font-size: 50px;
+    font-weight: 100;
+    display: inline;
+}
+.nav-title h3{
+    color: #95989A;
+    font-size: 20px;
+    font-weight: 100;
+    display: inline;
+}
+
+.nav-icons .icon{
+    padding-top: 17px;
+    float: right;
+    margin-left: 20px;
+}
+.nav-icons .icon i{
+    font-size: 25px;
+    color: black;
+    opacity: 0.8;
+    transition: 600ms ease;
+}
+.nav-icons .icon i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.nav-icons .icon:nth-child(1) i:hover{
+        -webkit-transform: translatex(5px);
+        -ms-transform: translatex(5px);
+    transform: translatex(5px);
+    transition: 600ms ease;
+}
+.nav-icons .icon:nth-child(2) i:hover{
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transition: 600ms ease;
+}
+.nav-icons .icon:nth-child(3) i:hover{
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    transition: 600ms ease;
+}
+
+                    /* NAV END*/
+                    /* INFO */
+
+.info{
+    padding: 2%;
+}
+.info .chart{
+    width: 58%;
+    float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px solid #DEDDDD;
+    background: white;
+    position: relative;
+    padding: 2%;
+    padding-top: 50px;
+}
+.chart-pie{
+    height: 100%;
+    width: 50%;
+    padding: 2%;
+    padding-left: 8%;
+    text-align: center;
+}
+.chart-circle{
+    border-radius: 60%;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+        -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+.chart-part-one{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+    background: #53B8D8;
+    z-index: 1;
+        -webkit-animation: pie 1s ease forwards;
+    animation: pie 1s ease forwards;
+    opacity: 0;
+        -webkit-clip-path: polygon(0 0,0 100%, 100% 16%);
+    clip-path: polygon(0 0,0 100%, 100% 16%);
+}
+.chart-part-two{
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    height: 50%;
+    width: 60%;
+    z-index: 2;
+    background: #5C5F93;
+        -webkit-animation: pie2 1s ease forwards;
+    animation: pie2 1s ease forwards;
+    animation-delay: 600ms;
+    opacity: 0;
+        -webkit-clip-path: polygon(94% 100%, 15% 65%, 79% 1%, 100% 0%, 100% 100%);
+    clip-path: polygon(94% 100%, 15% 65%, 79% 1%, 100% 0%, 100% 100%);
+}
+.chart-part-three{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 50%;
+    background: #DB5C9B;
+        -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    transform-origin: top left;
+    z-index: 1;
+        -webkit-animation: pie 1s ease forwards;
+    animation: pie 1s ease forwards;
+    animation-delay: 800ms;
+    z-index: 4;
+    opacity: 0;
+}
+.chart-part-four{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #4A82BC;
+    z-index: 3;
+        -webkit-animation: pie3 1s ease forwards;
+    animation: pie3 1s ease forwards;
+    animation-delay: 1200ms;
+    opacity: 0;
+}
+
+    @-webkit-keyframes pie {
+        from {width: 0; opacity: 0; height: 0;}
+        to {width: 50%; opacity: 1; height: 50%;}
+    }
+@keyframes pie{
+    from {width: 0; opacity: 0; height: 0;}
+    to {width: 50%; opacity: 1; height: 50%;}
+}
+
+    @-webkit-keyframes pie2 {
+            from {width: 0; opacity: 0;}
+            to {width: 60%; opacity: 1;}
+        }
+@keyframes pie2{
+    from {width: 0; opacity: 0;}
+    to {width: 60%; opacity: 1;}
+}
+
+    @-webkit-keyframes pie3 {
+        from {height: 0; opacity: 0;}
+        to {height: 100%; opacity: 1;}
+    }
+@keyframes pie3{
+    from {height: 0; opacity: 0;}
+    to {height: 100%; opacity: 1;}
+}
+
+    @-webkit-keyframes pieM {
+        from{width: 0; opacity: 0;}
+        to{width: 100%; opacity: 1;}
+    }
+@keyframes pieM{
+    from{width: 0; opacity: 0;}
+    to{width: 100%; opacity: 1;}
+}
+
+.chart-info{
+    width: 50%;
+    float: right;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4%;
+    padding-top: 40px;
+}
+.chart-info .parts{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #95989A;
+    background: gray;
+    padding-left: 10%;
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.chart-info .parts:nth-child(4){
+    background: #4A82BC;
+}
+.chart-info .parts:nth-child(3){
+    background: #DB5C9B;
+}
+.chart-info .parts:nth-child(2){
+    background: #5C5F93;
+}
+.chart-info .parts:nth-child(1){
+    background: #53B8D8;
+}
+.chart-info .parts:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+                    /* INFO END*/
+                    /* NUMBERS */
+
+.numbers{
+    border: 1px solid #DEDDDD;
+    width: 40%;
+    float: left;
+    text-align: center;
+    padding: 3%;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    padding-top: 40px;
+}
+.numbers h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+.numbers h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: darkslateblue;
+    padding-bottom: 4px;
+}
+
+                    /* NUMBERS END*/
+                    /* QUCIK */
+
+.quick{
+    border: 1px solid #DEDDDD;
+    width: 40%;
+    float: left;
+    text-align: center;
+    padding: 2%;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    padding-top: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+.quick span,
+.quick i{
+    color: black;
+}
+.quick .new-container:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+@media screen and (max-width: 740px) {     /* quick ide na 100% */
+    .quick {
+        width: 100%;
+    }
+}
+
+                    /* QUCIK END */
+                    /* ABOUT */
+
+.about{
+    clear: both;
+    border: 1px solid #DEDDDD;
+    padding: 3%;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    z-index: 1;
+    width: 68%;
+    float: left;
+}
+.about:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: #494E6B;
+    z-index: -1;
+    border-radius: 5px 5px 0 0;
+}
+.info-tabs{
+    margin-top: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+.info-tabs h2{
+    opacity: 0.5;
+}
+.info-tabs h2:first-child{
+    opacity: 1;
+}
+.info-tabs h2:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.about .btn{
+    width: 200px;
+    text-align: center;
+    border: 1px solid #D6CECE;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 5%;
+    transition: 400ms ease;
+}
+.about .btn:hover{
+    border: 1px solid #494E6B;
+    background: #494E6B;
+    color: white;
+    cursor: pointer;
+    transition: 400ms ease;
+}
+.about .chart-title h1,
+.about .chart-title i{
+    color: white;
+}
+.about h2{
+    color: white;
+    display: inline;
+}
+.about tr{
+    display: block;
+    margin-bottom: 10px;
+}
+.about tr:first-child{
+    margin-top: 70px;
+}
+.about th{
+    color: black;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    display: block;
+}
+.about td{
+    font-weight: 100;
+    color: black;
+    font-size: 20px;
+    display: block;
+}
+
+                    /* ABOUT END*/
+                    /* RECENT */
+
+.recent{
+    width: 30%;
+    float: left;
+    border: 1px solid #DEDDDD;
+    padding: 3%;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    padding-top: 40px;
+}
+.recent h2,
+.recent h2 i{
+    color: black;
+}
+.recent h2:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.recent span{
+    color: darkslateblue;
+    display: block;
+}
+.recent .sold{
+    margin-bottom: 20px;
+}
+.recent .sold:last-child{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 690px) {     /* recent ide na 100%*/
+    .recent{
+        width: 100%;
+    }
+    .about{
+        width: 100%;
+    }
+}
+
+                    /* RECENT */
+                    /* RATINGS */
+
+.ratings{
+    width: 30%;
+    float: left;
+    border: 1px solid #DEDDDD;
+    padding: 3%;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    padding-top: 40px;
+}
+.ratings .rate{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.ratings .rate{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.ratings .rate i{
+    color: darkorange;
+}
+.review{
+    margin-top: 20px;
+}
+.review span{
+    color: darkslateblue;
+}
+.dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.dots i{
+    color: black;
+    opacity: 0.3;
+}
+.dots i:first-child{
+    opacity: 0.8;
+}
+.dots i:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1320px) {     /* ratings idu na 100%*/
+    .ratings{
+        width: 100%;
+    }
+}
+
+                    /* RATINGS END*/
+                    /* MORE */
+
+.more{
+    clear: both;
+    text-align: center;
+}
+.more i{
+    color: black;
+    opacity: 0.1;
+    font-size: 172px;
+        -webkit-animation: rotate 10s linear infinite;
+    animation: rotate 10s linear infinite;
+}
+
+    @-webkit-keyframes rotate {
+        from {
+                -webkit-transform:rotate(0deg);
+            transform:rotate(0deg);
+        }
+        to { 
+                -webkit-transform:rotate(360deg);
+            transform:rotate(360deg);
+        }
+    }
+@keyframes rotate{
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg)}
+}
+
+                    /* MORE */
+                    /* FOOTER */
+
+.footer{
+    margin-top: 200px;
+    text-align: center;
+    background: white;
+    border: 1px solid #DEDDDD;
+    padding: 3%;
+    border-radius: 5px;
+}
+.footer span{
+    color: black;
+}
+
+                    /* FOOTER */
+
+/* ---------------------------------------------------- */
+
+                    /* MEDIA */
+
+@media screen and (max-width: 1270px) {     /* chart se smanjuje*/
+    .info .chart{
+        flex-direction: column;
+    }
+    .chart-circle{
+        width: 200px;
+        height: 200px;
+    }
+    .chart-pie{
+        width: 100%;
+    }
+    .chart-info{
+        width: 100%;
+    }
+    .chart-info .parts{
+        margin-top: 8px;
+    }
+    .chart-part-two{
+        right: 0;
+        bottom: 65px;
+        height: 50%;
+        width: 60%;
+        clip-path: polygon(94% 100%, 15% 65%, 79% 1%, 100% 0%, 100% 100%);
+    }
+}
+
+@media screen and (max-width: 1000px) {     /*bar nestaje*/
+    .bar{
+        display: none;
+        width: 0;
+    }
+    .main{
+        width: 100%;
+    }
+    .bar-burger{
+        display: none;
+    }
+    .bar-burger-nav{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 740px) {     /* info i chart idu na 100% */
+    .info .numbers{
+        width: 100%;
+    }
+    .info .chart{
+        width: 100%;
+        padding-top: 0;
+    }
+    .chart-info .parts{
+            -webkit-animation: pieM 1s ease forwards;
+        animation: pieM 1s ease forwards;
+        opacity: 0;
+    }
+    .info .chart-circle{
+        display: none;
+    }
+    .chart-info .parts:nth-child(4){
+        animation-delay: 1200ms;
+    }
+    .chart-info .parts:nth-child(3){
+        animation-delay: 900ms;
+    }
+    .chart-info .parts:nth-child(2){
+        animation-delay: 600ms;
+    }
+    .chart-info .parts:nth-child(1){
+        animation-delay: 300ms;
+    }
+}
+
+@media screen and (max-width: 600px) {     /*nav bar nestaje - ostaje samo burger*/
+    .icon{
+        display: none;
+    }
+    .bar-burger-nav{
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 10px;
+    }
+    .nav-title h1{
+        margin-left: 10px;
+        display: inline-block;
+    }
+    .container{
+        margin-bottom: 5%;
+    }
+    .info-tabs{
+        flex-wrap: wrap;
+    }
+    .info-tabs h2{
+        margin: 0 2px;
+    }
+}
+    /*iphone6*/
+@media screen and (max-width: 765px) {
+    
+}
+
+                    /* MEDIA END */
