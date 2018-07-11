@@ -1,0 +1,250 @@
+             /* PRE */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Roboto Condensed";
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 500px;
+    height: 770px;
+    margin: auto;
+    top: 140px;
+    position: relative;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 140px;
+}
+
+    /*btn*/
+.btn{
+    max-width: 350px;
+    height: 50px;
+    background: #7D92FF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    margin: auto;
+    border: none;
+    padding-top: 12px;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    border: 1px solid white;
+}
+    /*btn end*/
+
+                    /* PRE END*/
+                    /* LOGIN */
+
+.profile-img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+}
+.profile-img img{
+    width: 220px;
+    height: 220px;
+        -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.input-box{
+    width: 350px;
+    height: 50px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.input-box .text{
+    height: 100%;
+    width: 125px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    background: white;
+    color: black;
+    float: left;
+    border: none;
+    padding-top: 12px;
+}
+.input-box input{
+    height: 100%;
+    width: 225px;
+    background: rgba(255,255,255,0.6);
+    border: none;
+    padding-left: 40px;
+    color: black;
+}
+
+.register{
+    margin-top: 80px;
+}
+.register h1{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+.register .btn{
+    width: 200px;
+    height: 40px;
+    background: #515151;
+    font-size: 15px;
+}
+
+.dots{
+    margin-top: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+}
+.dots .dot{
+    background: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.dots .dot:last-child{
+    opacity: 0.5;
+}
+                    /* LOGIN END */
+                    /* REGISTER */
+
+.register-screen .dots .dot{
+    opacity: 0.5;
+}
+.register-screen .dots .dot:last-child{
+    opacity: 1;
+}
+.register-bottom{
+    padding-top: 80px;
+}
+
+                    /* REGISTER END*/
+                    /* TICK DONE PAGE */
+
+.accept{
+    width: 100%;
+    height: 100%;
+    transition: 600ms ease;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    background: #7D92FF;
+    visibility: hidden;
+    transition: 1s ease;
+    opacity: 0;
+        -webkit-transform: scale(0) translateY(800px);
+        -ms-transform: scale(0) translateY(800px);
+    transform: scale(0) translateY(800px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.accept h1{
+    font-weight: 100;
+}
+.accept h2{
+    font-size: 15px;
+    font-weight: 100;
+}
+.visible{
+    visibility: visible;
+    transition: 1s ease;
+    opacity: 0.9;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+
+svg{
+    width: 200px;
+}
+
+.circ{
+    opacity: 0;
+    stroke-dasharray: 130;
+    stroke-dashoffset: 130;
+    transition: all 2s;
+    transition-delay: 1s;
+}
+.tick{
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    transition: stroke-dashoffset 2s 0.5s ease-out;
+}
+.drawn + svg .path{
+    opacity: 1;
+    stroke-dashoffset: 0;
+}
+
+                    /* TICK DONE PAGE END*/
+                    /* TRANSITIONS */
+
+.login-screen{
+    transition: 600ms ease;
+}
+.register-screen{
+    transition: 600ms ease;
+    position: absolute;
+    top: 0;
+    right: -425px;
+}
+
+.slideLeft{
+        -webkit-transform: translateX(-500px);
+        -ms-transform: translateX(-500px);
+    transform: translateX(-500px);
+    transition: 600ms ease;
+}
+.slideDown{
+        -webkit-transform: translateY(-800px);
+        -ms-transform: translateY(-800px);
+    transform: translateY(-800px);
+    transition: 600ms ease;
+}
+
+                    /* TRANSITIONS END*/
+
+/* ---------------------------------------------------- */
+
+                    /* MEDIA */
+
+    /*iphone6*/
+@media screen and (max-width: 765px) {
+    
+}
+
+                    /* MEDIA END */
