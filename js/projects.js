@@ -20,8 +20,8 @@ var allProjects = [
     },
     {
         number: 4,
-        title: 'My Portfolio',
-        secondTitle: 'Self designed portfolio',
+        title: 'My Portfolio (OLD)',
+        secondTitle: 'New Portfolio is in Github Bio',
         href: 'projects/3-MyPortfolio/index.html'
     },
     {
