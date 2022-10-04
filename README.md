@@ -1,3 +1,6 @@
+**!  OLD PROJECTS  !**
+--
+
 Here you can find some of my HTML/CSS work.
 
 Please visit my GitHub Pages link here: https://petar11199.github.io/HTMLProjects/ for visual presentation.
